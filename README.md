@@ -14,7 +14,7 @@ BROWSER.php: delete and manage files
 
 Limitations:
 - for the moment, not easy to delete files (might be a feature though)
-- metadata displayed on the index page are limited to one field: Jpeg comment
+- metadata displayed on the index page are limited to one field: Jpeg comment (exiv2 -pc)
 - VIEWER.php not working yet, in the future might display & allow to edit metadata + delete & download file
 
 INSTALL
