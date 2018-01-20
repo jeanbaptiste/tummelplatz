@@ -6,6 +6,22 @@ $storeFolder = './uploads';
 
 //echo phpinfo();
  
+function scan_dir($dir) {
+    $ignored = array('.', '..', '.svn', '.htaccess');
+
+    $files = array();    
+    foreach (scandir($dir) as $file) {
+        if (in_array($file, $ignored)) continue;
+        $files[$file] = filemtime($dir . '/' . $file);
+    }
+
+    arsort($files);
+    $files = array_keys($files);
+
+    return ($files) ? $files : false;
+}
+
+
 
 if (!empty($_FILES)) {
  
@@ -20,7 +36,7 @@ if (!empty($_FILES)) {
 } else {                                                           
     $result  = array();
  
-    $files = scandir($storeFolder);                 //1
+    $files = scan_dir($storeFolder);                 //1
     if ( false!==$files ) {
         foreach ( $files as $file ) {
             	
