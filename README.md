@@ -10,7 +10,7 @@ Tummelplatz is a simple single web page for **sharing documents** and **document
 
 INDEX.php: drag and drop content or click/press in the blank space to upload content
 
-BROWSE.php: delete and manage files
+BROWSER.php: delete and manage files
 
 Limitations:
 - for the moment, not easy to delete files (might be a feature though)
