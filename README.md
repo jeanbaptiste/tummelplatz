@@ -21,26 +21,38 @@ INSTALL
 
 // dependencies ( exiv2, apache2 )
 
-sudo apt install exiv2 apache2 php php-gd libapache2-mod-php
+'''sudo apt install exiv2 apache2 php php-gd libapache2-mod-php
+
 sudo systemctl start apache2
+'''
 (if needed, activate php module in apache) a2enmod php
 
 // configuring php.ini to extend maximum file size to upload
+'''
 vim /etc/php/7.0/apache2/php.ini
+'''
 change this line: post_max_size = 2000M (instead of 2M) 
+
 change this line: upload_max_filesize = 2000M (instead of 2M)
+
 look also in index.php maxFilesize - should be 2000
 
 // installing the PHP files from GIT
+
 git clone then copy as root files in your /var/www/html/ (apache2) or else (other web server)
+
 place a .htpasswd file on the previous rep level (../) containing logn:pwd https://en.wikipedia.org/wiki/.htpasswd
 
 // create and allow apache to read and write in these dir
+'''
 sudo mkdir uploads/ cache/
+
 sudo chown www-data uploads/ media/logo.png media/logo.png cache/
+
 sudo chmod -R 775 cache/ uploads/
-
+'''
 // in case of the hosting of the uploads dir elsewhere (like /mnt/mountpoint/)
+'''
 sudo ln -s /mnt/mountpoint/ uploads ( no / at the end)
-
+'''
 // if it doesn't work look at Apache2 logs (/var/log/apache2 )
