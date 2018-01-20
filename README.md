@@ -35,7 +35,8 @@ look also in index.php maxFilesize - should be 2000
 git clone then copy as root files in your /var/www/html/ (apache2) or else (other web server)
 place a .htpasswd file on the previous rep level (../) containing logn:pwd https://en.wikipedia.org/wiki/.htpasswd
 
-// allow apache to read and write in these two dir
+// create and allow apache to read and write in these dir
+sudo mkdir uploads/ cache/
 sudo chown www-data uploads/ media/logo.png media/logo.png cache/
 sudo chmod -R 775 cache/ uploads/
 
