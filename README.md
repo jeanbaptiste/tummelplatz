@@ -3,7 +3,7 @@ Tummelplatz -- a chaotic archive v.0.1
 USE
 ---
 
-Tummelplatz is a simple single web page for **sharing documents** and **documenting projects** on a web server, for instance on a minicomputer (olimex, raspberri pi) hosted locally on a private network. Think it as dropbox without the cloud, or google drive without login nor password. Files are not ordered (chaos) but Tummelplatz tries to display the metadata they contain (archive). Tummelplatz should work on any web browser on a laptop but also on a mobile phone (useful to quickly create documents projects with pictures). Tummelplatz was created for the (no)action(no)space project, exploring how artists can own their digital infrastructure and share data as collective not individuals.
+Tummelplatz is a simple single web page for **sharing documents** and **documenting projects** on a web server, for instance on a minicomputer (olimex, raspberri pi) hosted locally on a private network. Think it as dropbox without the cloud, or google drive without login nor password. Files are not ordered (chaos) but Tummelplatz tries to display the metadata they contain (archive). Tummelplatz should work on any web browser on a laptop but also on a mobile phone (useful to quickly create documents projects with pictures). Tummelplatz was created for the (no)action(no)space project, exploring how artists can own their digital infrastructure and share data as collective not individuals. http://noactionnospace.org/
 
 INDEX.php: drag and drop content or click/press in the blank space to upload content
 
@@ -12,7 +12,7 @@ BROWSE.php: delete and manage files
 Limitations:
 - for the moment, not easy to delete files (might be a feature though)
 - metadata displayed on the index page are limited to one field: Jpeg comment
-- VIEWER.php not working yet, in the future might display & allow to edit metadata + delete & download file (feel free to contribute ;)
+- VIEWER.php not working yet, in the future might display & allow to edit metadata + delete & download file
 
 INSTALL
 -------
